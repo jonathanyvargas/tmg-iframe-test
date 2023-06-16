@@ -1,0 +1,44 @@
+<script> 
+  
+  function tmgWidgetClose(){
+
+    var x = document.getElementById("TextMyGovWidget");
+      if (x.style.display === "none"){
+        x.style.display = "block";
+    } 
+    else {
+    x.style.display = "none";
+  }
+}  
+  
+  function tmgWidgetChangeImage(){
+
+   var image = document.getElementById('tmgWidgetCloseButton');
+     if (image.src.match("TextMyGov-medium-TM-logo.png")){
+     image.src = "https://support.textmygov.com/wp-content/uploads/2023/04/close-button.png";
+    } 
+    else {image.src = "https://support.textmygov.com/wp-content/uploads/2021/04/TextMyGov-medium-TM-logo.png";
+  }
+}
+
+  function tmgWidgetBigCloseButton(x){
+    x.style.height = "40px";
+}
+
+  function tmgWidgetNormalCloseButton(x){
+    x.style.height = "35px";
+}
+  
+  function tmgWidgetShowCloseButton() { 
+    document.getElementById("tmgWidgetCloseButton").style.display = "inline"; 
+}
+  setTimeout("tmgWidgetShowCloseButton()", 1800);
+  
+
+</script>
+
+<button onclick="tmgWidgetClose();tmgWidgetChangeImage()" style="z-index: 11; position: fixed; bottom: 2%; right: .5%; background: none; border: none;">
+  <img onmouseover="tmgWidgetBigCloseButton(this)" onmouseout="tmgWidgetNormalCloseButton(this)" src="https://support.textmygov.com/wp-content/uploads/2023/04/close-button.png" id="tmgWidgetCloseButton" alt="TextMyGov widget toggle button" title="TextMyGov widget toggle button" Style="height: 35px; display:none;"/></button>
+
+<div id="TextMyGovWidget" style="position: fixed; z-index: 10;">
+  <iframe src="https://peach15129207.brizy.site"style="width: 260px; height: 300px; position: fixed; bottom: 0; right: 0; border: 0px;"></iframe></div>
